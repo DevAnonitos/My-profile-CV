@@ -17,5 +17,16 @@
             font-weight: 500;
             font-family: "Coolvetica";
         }
+
+        &::before {
+            content: '<h1>';
+            font-family: "La Belle Aurore";
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            position: absolute;
+            margin-top: -35px;
+            left: 15px;
+            opacity: 0.6;
+        }
     }
 }

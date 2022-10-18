@@ -3,6 +3,9 @@ import { Link, NavLink } from 'react-router-dom';
 import './Sidebar.scss';
 
 
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
+
 // icon
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faGear, faHome, faUser} from '@fortawesome/free-solid-svg-icons'
@@ -17,7 +20,13 @@ function Sidebar() {
 
             {/* Logo and sub title */}
             <Link className='logo' to='/'>
-                <img src={Logo} alt="Logo" />
+                <Tippy 
+                    content="Logo"
+                    placement='right'
+                    delay={[1]}
+                >
+                    <img src={Logo} alt="Logo" />
+                </Tippy>
             </Link>
             <div>
                 <h4 className='logo-title'>BaoNg.dev</h4>
@@ -26,23 +35,39 @@ function Sidebar() {
             {/* navbar icons */}
             <nav>
                 {/* Components */}
-                <NavLink exact='true' activeclassname='active' to='/'>
-                        <FontAwesomeIcon icon={faHome} />
+                <NavLink 
+                    exact='true' 
+                    activeclassname='active' 
+                    to='/'>
+                        <FontAwesomeIcon className='u--zoomIn' icon={faHome} />
                 </NavLink>
 
-                <NavLink exact='true' activeclassname='active' className='about-link' to='/about'>
-                        <FontAwesomeIcon icon={faUser} />
+                <NavLink 
+                    exact='true' 
+                    activeclassname='active' 
+                    className='about-link' 
+                    to='/about'>
+                        <FontAwesomeIcon className='u--zoomIn' icon={faUser} />
                 </NavLink>
 
-                <NavLink exact='true' activeclassname='active' className="contact-link" to='/contact'>
-                        <FontAwesomeIcon icon={faEnvelope} />
+                <NavLink 
+                    exact='true' 
+                    activeclassname='active' 
+                    className="contact-link" 
+                    to='/contact'>
+                        <FontAwesomeIcon className='u--zoomIn' icon={faEnvelope} />
                 </NavLink>
 
-                <NavLink exact='true' activeclassname='active' className="setting-link" to='/setting'>
-                        <FontAwesomeIcon icon={faGear} />
+                <NavLink 
+                    exact='true' 
+                    activeclassname='active' 
+                    className="setting-link" 
+                    to='/setting'>
+                        <FontAwesomeIcon className='u--zoomIn' icon={faGear} />
                 </NavLink>
             </nav>
 
+            {/* ================URL LINK social======================== */}
             <ul>
                 <li>
                     <a
