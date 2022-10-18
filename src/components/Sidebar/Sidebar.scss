@@ -1,0 +1,108 @@
+.nav-bar {
+    // default header position
+    top: 0;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: var(--background-header);
+    width: var(--width-header);
+    height: 100%;
+    z-index: 3;
+    min-height: 500px;
+
+    .logo {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 8px;
+    }
+
+    img {
+        display: block;
+        margin-bottom: 8px;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        background-color: transparent;
+    }
+
+    div {
+        width: 50px;
+    }
+
+    .logo-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--white-color);
+        margin-top: -8px;
+        cursor: default;
+        padding: 0 4px;
+    }
+    // nav header component
+    nav {
+        display: flex;
+        position: absolute;
+        align-items: center;
+        text-align: center;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 210px;
+        top: 50%;
+        margin-top: -120px;
+        width: 100%;
+
+        a {
+            display: block;
+            position: relative;
+            width: 100%;
+            height: 51px;
+            line-height: 51px;
+            font-size: 2.6rem;
+            color: #4d4d4e;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+            border-radius: 25px;
+
+            &:hover {
+                background-color: var(--primary-color);
+                color: var(--white-color);
+            }
+        }
+
+        i {
+            transition: all 0.2s ease-in-out;
+        }
+    }
+    // list of social buttons
+    ul {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        display: block;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        margin: 0;
+
+        li {
+            a {
+                display: block;
+                font-size: 1.8rem;
+                padding: 8px 0;
+                line-height: 16px;
+                color: #4d4d4e;
+                transition: all 0.3s ease-in-out;
+
+                &:hover svg {
+                    color: #ffd32a;
+                }
+            }
+        }
+    }
+
+}

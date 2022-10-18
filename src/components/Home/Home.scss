@@ -1,0 +1,21 @@
+.home-page {
+    
+    .text-zone {
+        position: absolute;
+        left: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40%;
+        max-height: 90%;
+    }
+
+    h1 {
+        &.main-title {
+            letter-spacing: 0.4rem;
+            font-size: 3.5rem;
+            color: var(--white-color);
+            font-weight: 500;
+            font-family: "Coolvetica";
+        }
+    }
+}

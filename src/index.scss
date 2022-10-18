@@ -1,0 +1,57 @@
+// root.css
+:root {
+  // color UI
+  --primary-color: #ffd32a;
+  --white-color: #fafafa;
+  --background-main-color: #022c43;
+  --background-header: #181818;
+
+  // layout variables size
+  --width-header: 80px;
+}
+
+// reset CSS
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+// font size for web
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: block;
+  margin: 0;
+  overflow: hidden;
+  color: var(--text-color);
+  background-color: var(--background-main-color);
+  font-family: 300 11px/1.4 "Helvetica Neue", "sans-serif"; 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
