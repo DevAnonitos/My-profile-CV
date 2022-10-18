@@ -10,17 +10,22 @@ import 'tippy.js/dist/tippy.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faGear, faHome, faUser} from '@fortawesome/free-solid-svg-icons'
 import {faFacebook, faGithub, faInstagram} from '@fortawesome/free-brands-svg-icons'
+
+// props
+import React, { forwardRef} from 'react'
+
 // Images
 import Logo from '../../assets/images/logo-main.png'
 
 
-function Sidebar() {
+const Sidebar = forwardRef((props, ref) =>{
     return ( 
         <div className='nav-bar'>
 
             {/* Logo and sub title */}
             <Link className='logo' to='/'>
-                <Tippy 
+                <Tippy
+                    zIndex={[100]}
                     content="Logo"
                     placement='right'
                     delay={[1]}
@@ -100,6 +105,6 @@ function Sidebar() {
 
         </div>
     );
-}
+});
 
 export default Sidebar;

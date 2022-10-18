@@ -1,16 +1,17 @@
 
 // import file from styles
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,500;0,600;0,700;0,800;1,200;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;1,700&display=swap');
+// animate.css
 @import 'animate.css';
 
 // var color from styles
 $primary-color: #ffd32a;
 
 // animate.css
-$ANIMATION_DURATION:               1s;
-$EASE_IN_OUT:                      cubic-bezier(0.445, 0.05, 0.55, 0.95);
-$CUBIC_BEZIER_1:                   cubic-bezier(0.550, 0.055, 0.675, 0.190);
-$CUBIC_BEZIER_2:                   cubic-bezier(0.175, 0.885, 0.320, 1);
+$ANIMATION_DURATION: 1s;
+$EASE_IN_OUT: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+$CUBIC_BEZIER_1: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+$CUBIC_BEZIER_2: cubic-bezier(0.175, 0.885, 0.320, 1);
 
 @-webkit-keyframes zoomIn {
     0% { opacity: 0; -webkit-transform: scale3d(.3, .3, .3); }

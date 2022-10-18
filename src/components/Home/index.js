@@ -14,9 +14,11 @@ function Home() {
                     web developer
                 </h1>
                 <h2 className='sub-title'>
-                    Fullstack developer / Javascript Expert / Blogger
+                    Fullstack developer 
+                    / Javascript Expert 
+                    / Blogger
                 </h2>
-                <Link to='/contact' className='flat-button'>CONTACT ME</Link>
+                <Link to='/contact' className='flat-button'>Contact me</Link>
             </div>
         </div>
     );

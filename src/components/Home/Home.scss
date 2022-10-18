@@ -28,5 +28,54 @@
             left: 15px;
             opacity: 0.6;
         }
+
+        &::after {
+            content: '</h1>';
+            font-family: "La Belle Aurore";
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            position: absolute;
+            margin-top: 18px;
+            margin-left: 20px;
+            animation: faceIn 1s backwards;
+            opacity: 0.6;
+        }
+    }
+
+    .sub-title {
+        color: var(--subtext-color);
+        margin-top: 20px;
+        font-size: 1.6rem;
+        font-weight: 600;
+        font-family: sans-serif;
+        letter-spacing: 0.4rem;
+        animation: faceIn 1s 1.8s backwards;
+    }
+
+    .flat-button {
+        text-transform: uppercase;
+        color: var(--primary-color);
+        font-size: 1.8rem;
+        font-weight: 400;
+        font-family: sans-serif;
+        letter-spacing: 0.4rem;
+        text-decoration: none;
+        padding: 10px 18px;
+        border: 1px solid var(--white-color);
+        border-radius: 5px;
+        float: left;
+        margin-top: 25px;
+        white-space: nowrap;
+        position: relative;
+        animation: faceIn 1s 1.8s backwards;
+        display: flex;
+        align-items: center;
+        transition: all 0.25s ease-in-out;
+
+        &:hover {
+            background-color: var(--primary-color);
+            color: #000;
+        }
     }
 }
+

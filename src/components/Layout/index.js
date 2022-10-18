@@ -1,11 +1,20 @@
+// tippy
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css'; // optional
+
 import { Outlet } from 'react-router-dom';
 import Sidebar from '../Sidebar';
+
+
 import './Layout.scss'
 
 function Layout() {
     return ( 
         <div className='App'>
-            <Sidebar />
+            <Tippy>
+                <Sidebar />
+            </Tippy>
+
             <div className='page'>
                 <span className='tags top-tags'>&lt;body&gt;</span>
 
