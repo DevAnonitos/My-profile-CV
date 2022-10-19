@@ -43,7 +43,8 @@ const Sidebar = forwardRef((props, ref) =>{
                 <NavLink 
                     exact='true' 
                     activeclassname='active' 
-                    to='/'>
+                    to='/'
+                >
                         <FontAwesomeIcon className='u--zoomIn' icon={faHome} />
                 </NavLink>
 
@@ -51,7 +52,8 @@ const Sidebar = forwardRef((props, ref) =>{
                     exact='true' 
                     activeclassname='active' 
                     className='about-link' 
-                    to='/about'>
+                    to='/about'
+                >
                         <FontAwesomeIcon className='u--zoomIn' icon={faUser} />
                 </NavLink>
 

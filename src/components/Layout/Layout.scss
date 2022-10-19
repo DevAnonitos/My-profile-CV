@@ -38,3 +38,73 @@
     animation: faceIn 1s forwards;
     animation-delay: 1s;
 }
+
+.about-page {
+    .text-zone {
+        position: absolute;
+        left: 10%;
+        top: 32%;
+        width: 35%;
+        vertical-align: middle;
+        display: table-cell;
+        max-height: 90%;
+
+        .main-title {
+            font-size: 3.6rem;
+            font-family: 'Coolvetica';
+            color: var(--primary-color);
+            font-weight: 400;
+            margin-top: 0;
+            position: relative;
+            margin-bottom: 40px;
+            left: 10px;
+
+            &::before {
+                content: '<h1>';
+                font-family: 'La Belle Aurore';
+                font-size: 1.4rem;
+                position: absolute;
+                margin-top: -125px;
+                left: -10px;
+                opacity: 0.6;
+                line-height: 18;
+            }
+
+            &::after {
+                content: '<h1/>';
+                font-family: 'La Belle Aurore';
+                font-size: 1.4rem;
+                position: absolute;
+                left: -30px;
+                bottom: -20px;
+                margin-left: 20px;
+                opacity: 0.6;
+            }
+        }
+        .main-description{
+            font-size: 1.8rem;
+            color: var(--white-color);
+            font-family: sans-serif;
+            font-weight: 300;
+            opacity: 0.8;
+            min-width: fit-content;
+            margin-bottom: 14px;
+            text-align: justify;
+            animation: pulse 1s;
+
+            &:nth-of-type(1){
+                animation-delay: 1.1s;
+            }
+
+            &:nth-of-type(2){
+                animation-delay: 1.2s;
+            }
+        }
+    }
+
+    .text-animate-hover{
+        &:hover {
+            color: var(--white-color);
+        }
+    }
+}
