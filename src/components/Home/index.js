@@ -7,6 +7,7 @@ import AnimatedLetters from '../AnimatedLetters';
 
 // style components
 import './Home.scss'
+import Logo from './Logo';
 
 function Home() {
     // logic state
@@ -52,9 +53,11 @@ function Home() {
                     / Blogger
                 </h2>
 
-                <Link to='/contact' className='flat-button'>Contact me</Link>
-
+                <Link to='/contact' className='flat-button'>
+                    Contact me
+                </Link>
             </div>
+            <Logo />
         </div>
     );
 }
