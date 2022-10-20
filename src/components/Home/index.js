@@ -57,7 +57,7 @@ function Home() {
                     Contact me
                 </Link>
             </div>
-            <Logo />
+            {/* <Logo /> */}
         </div>
     );
 }
