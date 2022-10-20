@@ -7,7 +7,7 @@ import AnimatedLetters from '../AnimatedLetters';
 
 // style components
 import './Home.scss'
-import Logo from './Logo';
+
 
 function Home() {
     // logic state
@@ -57,7 +57,6 @@ function Home() {
                     Contact me
                 </Link>
             </div>
-            {/* <Logo /> */}
         </div>
     );
 }
