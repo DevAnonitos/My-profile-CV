@@ -3,7 +3,9 @@ import { useState, useEffect } from 'react';
 
 import { Link } from 'react-router-dom';
 
+// import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters';
+import Dial from './Dial';
 
 // style components
 import './Home.scss'
@@ -56,6 +58,11 @@ function Home() {
                 <Link to='/contact' className='flat-button'>
                     Contact me
                 </Link>
+            </div>
+            {/* <Loader type="pacman" /> */}
+            {/* other components */}
+            <div className='wrapper-sub'>
+                <Dial />
             </div>
         </div>
     );
