@@ -1,17 +1,40 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import './Contact.scss'
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
+import emailjs from '@emailjs/browser'
 
 
 const Contact = () => {
 
     const [letterClass, setLetterClass] = useState('text-animate');
+    const refForm = useRef()
+
     useEffect(() => {
         setTimeout(() => {
             setLetterClass('text-animate-hover')
         }, 3000)
     }, [])
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm(
+            'gmail',
+            'template_p2agjx9',
+            refForm.current,
+            '8tT6ix3REU_xoHb0M',
+        )
+        .then(
+            () => {
+                alert('Message successfully sent!');
+                window.location.reload(false)
+            },
+            () => {
+                alert('Fail to sent message!')
+            }
+        )
+    }
 
   return (
     <>
@@ -28,24 +51,36 @@ const Contact = () => {
                     I am interested in freelance opportunities - especially on ambitious or large projects. However, if you have any other requests or questions, don't hesitate to contact me using below form either.
                 </p>
                 <div className='contact-form'>
-                    <form>
+                    <form ref={refForm} onSubmit={sendEmail}>
                         <ul>
-                            <li className='half'>
-                                <input type="text" name="name" placeholder='Name' required />
+                            <li className="half">
+                                <input placeholder="Name" type="text" name="name" required />
                             </li>
-                            <li className='half'>
-                                <input type="email" name="email" placeholder='Email' required />
+                            <li className="half">
+                                <input
+                                    placeholder="Email"
+                                    type="email"
+                                    name="email"
+                                    required
+                                />
                             </li>
-                            <li className='half'>
-                                <input type="text" name="subject" placeholder='Subject' required />
+                            <li>
+                                <input
+                                    placeholder="Subject"
+                                    type="text"
+                                    name="subject"
+                                    required
+                                />
                             </li>
-                            <li className='half'>
-                               <textarea name="message" placeholder='Message' required>
-
-                               </textarea>
+                            <li>
+                                <textarea
+                                    placeholder="Message"
+                                    name="message"
+                                    required
+                                ></textarea>
                             </li>
-                            <li className='half'>
-                                <input type="submit" className='flat-button' />
+                            <li>
+                                <input type="submit" className="flat-button" value="SEND" />
                             </li>
                         </ul>
                     </form>
