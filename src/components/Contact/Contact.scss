@@ -31,6 +31,11 @@
             }
         }
     }
+
+    input:focus-visible {
+      outline: 2px solid #ffd700;
+      border-radius: 8px;
+    }
   
     input[type='text'],
     input[type='email'] {
@@ -41,6 +46,7 @@
       font-size: 16px;
       color: #fff;
       padding: 0 20px;
+      border-radius: 8px;
       box-sizing: border-box;
     }
   
@@ -52,13 +58,14 @@
       font-size: 16px;
       color: #fff;
       padding: 20px;
+      border-radius: 8px;
       box-sizing: border-box;
       min-height: 150px;
     }
   
     .flat-button {
       color: #ffd700;
-      font-size: 11px;
+      font-size: 1.4rem;
       letter-spacing: 3px;
       text-decoration: none;
       padding: 8px 10px;
@@ -69,7 +76,7 @@
       text-transform: uppercase;
       float: right;
       text-align: center;
-      margin-right: 10px;
+      margin-right: 12px;
       cursor: pointer;
     }
   }
@@ -104,11 +111,12 @@
     font-size: 17px;
     font-weight: 300;
     opacity: 0;
+    border-radius: 5px;
     animation: fadeIn 1s 1.5s;
     animation-fill-mode: forwards;
   
     span {
-      font-size: 16px;
+      font-size: 1.2rem;
   
       span {
         color: #ffd700;

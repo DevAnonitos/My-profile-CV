@@ -5,10 +5,15 @@ import AnimatedLetters from '../AnimatedLetters'
 import emailjs from '@emailjs/browser'
 
 
+import Alert from '@mui/material/Alert';
+import AlertTitle from '@mui/material/AlertTitle';
+import Stack from '@mui/material/Stack';
+
+
 const Contact = () => {
 
     const [letterClass, setLetterClass] = useState('text-animate');
-    const refForm = useRef()
+    const Form = useRef()
 
     useEffect(() => {
         setTimeout(() => {
@@ -20,18 +25,18 @@ const Contact = () => {
         e.preventDefault();
 
         emailjs.sendForm(
-            'gmail',
+            'service_bm1pl4l',
             'template_p2agjx9',
-            refForm.current,
-            '8tT6ix3REU_xoHb0M',
+            Form.current,
+            '_7i3rPu-HPtohnGjj'
         )
         .then(
             () => {
-                alert('Message successfully sent!');
-                window.location.reload(false)
+               alert('Send successfully!')
+               Window.location.reload(false)
             },
             () => {
-                alert('Fail to sent message!')
+                
             }
         )
     }
@@ -51,7 +56,7 @@ const Contact = () => {
                     I am interested in freelance opportunities - especially on ambitious or large projects. However, if you have any other requests or questions, don't hesitate to contact me using below form either.
                 </p>
                 <div className='contact-form'>
-                    <form ref={refForm} onSubmit={sendEmail}>
+                    <form ref={Form} onSubmit={sendEmail}>
                         <ul>
                             <li className="half">
                                 <input placeholder="Name" type="text" name="name" required />
@@ -86,7 +91,18 @@ const Contact = () => {
                     </form>
                 </div>
             </div>
+            <div className='info-map'>
+                BaoNguyen,
+                <br />
+                VietNam
+                <br />
+                District 12, HoChiMinh city
+            </div>
+            <div className='map-wrap'>
+                
+            </div>
         </div>
+
         {/* Loader */}
         <Loader type='pacman' />
     </>
