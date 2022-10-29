@@ -5,6 +5,8 @@ import AnimatedLetters from '../AnimatedLetters'
 import emailjs from '@emailjs/browser'
 
 
+import {MapContainer, TileLayer, Marker, Popup} from 'react-leaflet';
+
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
 import Stack from '@mui/material/Stack';
@@ -36,7 +38,7 @@ const Contact = () => {
                Window.location.reload(false)
             },
             () => {
-                
+                alert('Error send!!');
             }
         )
     }
@@ -99,7 +101,15 @@ const Contact = () => {
                 District 12, HoChiMinh city
             </div>
             <div className='map-wrap'>
-                
+                <MapContainer center={[10.861940, 106.658890]} zoom={13}>
+                    <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+                    <Marker position={[10.861940, 106.658890]}>
+                        <Popup>BaoNguyen lives here, come over for a cup of coffee :) 
+                            <br />
+                            Make a channel :3
+                        </Popup>
+                    </Marker>
+                </MapContainer>
             </div>
         </div>
 
