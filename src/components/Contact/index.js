@@ -1,19 +1,16 @@
+// deps
 import React, {useState, useEffect, useRef} from 'react'
 import './Contact.scss'
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
 import emailjs from '@emailjs/browser'
 
-
+// components
 import {MapContainer, TileLayer, Marker, Popup} from 'react-leaflet';
-
-import Alert from '@mui/material/Alert';
-import AlertTitle from '@mui/material/AlertTitle';
-import Stack from '@mui/material/Stack';
 
 
 const Contact = () => {
-
+    // logic handle event
     const [letterClass, setLetterClass] = useState('text-animate');
     const Form = useRef()
 
@@ -104,7 +101,7 @@ const Contact = () => {
                 <MapContainer center={[10.861940, 106.658890]} zoom={13}>
                     <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
                     <Marker position={[10.861940, 106.658890]}>
-                        <Popup>BaoNguyen lives here, come over for a cup of coffee :) 
+                        <Popup>BaoNguyen lives here :) 
                             <br />
                             Make a channel :3
                         </Popup>

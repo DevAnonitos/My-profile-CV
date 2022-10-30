@@ -8,7 +8,7 @@ import 'tippy.js/dist/tippy.css';
 
 // icon
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faGear, faHome, faUser} from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faEye , faHome, faUser} from '@fortawesome/free-solid-svg-icons'
 import {faFacebook, faGithub, faInstagram} from '@fortawesome/free-brands-svg-icons'
 
 // props
@@ -68,9 +68,9 @@ const Sidebar = forwardRef((props, ref) =>{
                 <NavLink 
                     exact='true' 
                     activeclassname='active' 
-                    className="setting-link" 
-                    to='/setting'>
-                        <FontAwesomeIcon className='u--zoomIn' icon={faGear} />
+                    className="view-link" 
+                    to='/view'>
+                        <FontAwesomeIcon className='u--zoomIn' icon={faEye} />
                 </NavLink>
             </nav>
 

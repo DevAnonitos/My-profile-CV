@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom';
 import AnimatedLetters from '../AnimatedLetters';
 
 
+
 // style components
 import './Home.scss'
-
 
 function Home() {
     // logic state
