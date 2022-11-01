@@ -10,7 +10,7 @@ import {MapContainer, TileLayer, Marker, Popup} from 'react-leaflet';
 
 
 const Contact = () => {
-    // logic handle event
+    // logic handle <event></event>
     const [letterClass, setLetterClass] = useState('text-animate');
     const Form = useRef()
 

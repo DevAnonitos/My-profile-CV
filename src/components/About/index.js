@@ -28,7 +28,7 @@ const About = () => {
                     />
                 </h1>
                 <p className='main-description'>
-                    I'm studying HoChiMinh Open university in 2021. My major's computer science. A day by day, I always going on an up to date the latest technologies. In the near future, I will become a full stack developer from Zero to Hero.
+                    I'm studying HoChiMinh Open university in 2021. My major's computer science. In the near future, I will become a full stack developer from Zero to Hero.
                 </p>
                 <p className='main-description'>
                     I'm a persistent, patient and hard-working person. I want to make a useful contribution to the community.
