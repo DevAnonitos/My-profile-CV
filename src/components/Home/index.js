@@ -7,8 +7,7 @@ import { Link } from 'react-router-dom';
 import AnimatedLetters from '../AnimatedLetters';
 
 // components
-
-import { Box} from '@mui/material';
+import Logos from './Logo';
 
 // style components
 import './Home.scss'
@@ -61,26 +60,7 @@ function Home() {
                     Contact me
                 </Link>
             </div>
-
-            <>
-                <Box
-                    sx={{
-                        display: 'flex ',
-                        alignItems: 'center',
-                        width: 700,
-                        height: 400,
-                        marginBlock: 25,
-                        marginLeft: '50%',
-                        borderRadius: 10,
-                        backgroundColor: '#c8d6e5',
-                        '&:hover': {
-                            opacity: [0.9, 0.8, 0.7],
-                        },
-                    }}    
-                >
-                    
-                </Box>
-            </>
+            <Logos />
         </div>
     );
 }
