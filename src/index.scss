@@ -57,3 +57,21 @@ body {
   background: #555;
 }
 
+.dashboard {
+  margin-top: 100px;
+  margin-left: 200px;
+}
+
+.Login-btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.Login-btn:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+

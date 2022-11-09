@@ -20,6 +20,7 @@
     "@tippyjs/react": "^4.2.6",
     "animate.css": "^4.1.1",
     "bootstrap": "^5.2.2",
+    "firebase": "^9.13.0",
     "gsap": "npm:gsap-trial@^3.11.3",
     "gsap-trial": "^3.11.3",
     "loaders.css": "^0.1.2",
