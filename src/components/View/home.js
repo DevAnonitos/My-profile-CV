@@ -1,7 +1,9 @@
 import React, { useRef } from 'react'
-import { auth } from '../../firebase'
-import { ref } from 'firebase/storage';
-
+import { auth, db, storage } from '../../firebase'
+import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
+import { addDoc } from 'firebase/firestore';
+import { collection } from 'firebase/firestore/lite';
+ 
 const HoMe = () => {
 
   const form = useRef();
@@ -14,8 +16,46 @@ const HoMe = () => {
     const url = form.current[2]?.value;
     const image = form.current[3]?.files[0];
     
-    const storageRef = ref();
-    
+    const storageRef = ref(storage, `portfolio/${image.name}`);
+
+    uploadBytes(storageRef, image).then(
+      (snapshot) => {
+          getDownloadURL(snapshot.ref).then((downloadUrl) => {
+              savePortfolio({
+                  name,
+                  description,
+                  url,
+                  image: downloadUrl
+              })
+          }, (error) => {
+              console.log(error);
+              savePortfolio({
+                  name,
+                  description,
+                  url,
+                  image: null
+              })
+          })
+      }, (error) => {
+          console.log(error);
+          savePortfolio({
+              name,
+              description,
+              url,
+              image: null
+          })
+      }
+    )
+  }
+
+  const savePortfolio = async (portfolio) => {
+    console.log(portfolio);
+    try {
+      await addDoc(collection(db, 'portfolio'), portfolio);
+      window.location.reload(false);
+    } catch (error) {
+      alert('Failed to add portfolio!');
+    }
   }
 
   return (
