@@ -8,17 +8,20 @@ import 'tippy.js/dist/tippy.css';
 
 // icon
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faEye , faHome, faUser} from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faEye , faHome, faUser, faSuitcase} from '@fortawesome/free-solid-svg-icons'
 import {faFacebook, faGithub, faInstagram} from '@fortawesome/free-brands-svg-icons'
 
 // props
-import React, { forwardRef} from 'react'
+import React, { forwardRef, useState} from 'react'
 
 // Images
 import Logo from '../../assets/images/logo-main.png'
 
 
 const Sidebar = forwardRef((props, ref) =>{
+
+    const [showNav, setShowNav] = useState(false);
+
     return ( 
         <div className='nav-bar'>
 

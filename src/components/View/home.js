@@ -3,7 +3,11 @@ import { auth, db, storage } from '../../firebase'
 import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
 import { addDoc } from 'firebase/firestore';
 import { collection } from 'firebase/firestore/lite';
- 
+
+import Avatar from '@mui/material/Avatar';
+import Stack from '@mui/material/Stack';
+import { deepOrange, deepPurple } from '@mui/material/colors';
+
 const HoMe = () => {
 
   const form = useRef();
@@ -58,16 +62,14 @@ const HoMe = () => {
     }
   }
 
+  
+
   return (
     <div className='dashboard'>
-        <form ref={form} onSubmit={submitProfile}>
-          <p><input type='text' placeholder='name' /></p>
-          <p><textarea placeholder='description'></textarea></p>
-          <p><input type='text' placeholder='Url' /></p>
-          <p><input type='file' placeholder='Image' /></p>
-          <button type='submit'>submit</button>
-          <button onClick={() => auth.signOut()}>Sign out</button>
-        </form>
+        <Stack direction="row" spacing={2}>
+          <Avatar sx={{ bgcolor: deepOrange[500] }}>N</Avatar>
+        </Stack>
+        <button className='Logout-btn' onClick={() => auth.signOut()}>Sign out</button>
     </div>
   )
 }
