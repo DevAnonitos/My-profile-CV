@@ -8,6 +8,8 @@ import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 import { deepOrange, deepPurple } from '@mui/material/colors';
 
+import { Typography, AppBar, Card, CardActions, CardContent, CssBaseline, Grid, Toolbar, Container, Button } from '@mui/material'
+
 const HoMe = () => {
 
   const form = useRef();
@@ -65,12 +67,42 @@ const HoMe = () => {
   
 
   return (
-    <div className='dashboard'>
-        <Stack direction="row" spacing={2}>
-          <Avatar sx={{ bgcolor: deepOrange[500] }}>N</Avatar>
-        </Stack>
+  <>
+    <AppBar position='relative' sx={{marginLeft: 10, display: 'flex', justifyContent: 'space-between'}}>
+      <Toolbar sx={{display: 'flex', justifyContent: 'center'}}>
+        <Typography variant="h2" color="initial">
+          My Current Projects
+        </Typography>
         <button className='Logout-btn' onClick={() => auth.signOut()}>Sign out</button>
-    </div>
+      </Toolbar>
+    </AppBar> 
+    <main>
+      <div>
+        <Container maxWidth='sm'>
+          <Typography variant='h3' align='center' color='#f1c40f' gutterBottom sx={{marginTop: 2}}> 
+            Some Projects
+          </Typography>
+          <Typography variant='h5' align='center' color='#fff' paragraph>
+            Hello everyone. This is a view page and I'm trying to show you some current projects. About HTML, CSS and Javascript, some library Reactjs, JQUERY, SASS
+          </Typography>
+          <div>
+            <Grid container spacing={2} justifyContent='center'>
+              <Grid item>
+                <Button variant='contained' color='primary' sx={{padding: 2}}>
+                  See my project
+                </Button>
+              </Grid>
+              <Grid item>
+                <Button variant='outlined' color='primary' sx={{padding: 2}}>
+                  Secondary Action
+                </Button>
+              </Grid>
+            </Grid>
+          </div>
+        </Container>
+      </div>
+    </main>
+  </>
   )
 }
 
