@@ -2,14 +2,14 @@
     // default header position
     top: 0;
     display: flex;
-    position: absolute;
+    position: fixed;
     align-items: center;
     flex-direction: column;
     justify-content: flex-start;
     background-color: var(--background-header);
     width: var(--width-header);
     height: 100%;
-    z-index: 3;
+    z-index: 999;
     min-height: 500px;
 
     .logo {
