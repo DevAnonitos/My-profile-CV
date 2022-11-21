@@ -17,6 +17,8 @@ import Paper from '@mui/material/Paper';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
+import './login.scss'
+
 
 // func DATA table
 function createData(name, calories, fat, carbs, protein, price) {
@@ -152,7 +154,7 @@ const Login = () => {
 
         {/* table container */}
 
-        <TableContainer component={Paper} sx={{display: 'flex', flexDirection:'column', width: 1500, height: 400, justifyContent: 'center', alignItems:'center', marginLeft: 18, marginTop: 10}}>
+        <TableContainer component={Paper} sx={{display: 'flex', flexDirection:'column', width: 1500, height: 400, justifyContent: 'center', alignItems:'center', marginLeft: 18, marginTop: 10}} className='animate'>
           <Table aria-label="collapsible table">
             <TableHead>
               <TableRow>

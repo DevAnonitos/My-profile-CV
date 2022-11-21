@@ -84,7 +84,7 @@ const HoMe = () => {
           <Grid item sx={{padding: '20px 0'}} xs={12} sm={6}>
             {/*----------------- Card content-------------------------------- */}
 
-            <Card sx={{height: '100%', display: 'flex', flexDirection: 'column'}}>
+            <Card sx={{height: '100%', display: 'flex', flexDirection: 'column'}} className='animateCard'>
               <CardMedia
                 sx={{paddingTop: '56.25%'}}
                 image='https://th.bing.com/th/id/OIP.miyD2HqmD664oIm7qk4lLgHaD4?pid=ImgDet&rs=1'
@@ -102,13 +102,17 @@ const HoMe = () => {
                 <Button size='small' color='primary'>
                   <a href="https://nguyenbao23131.github.io/Manage_landing_page/" target={'blank'} className='linkCard'>View</a>
                 </Button>
-                <Button size='small' color='primary'>Repositories</Button>
+                <Button size='small' color='primary'>
+                  <a href="https://github.com/NguyenBao23131/Manage_landing_page" target={'blank'} className='linkCardActive'>
+                    Repositories
+                  </a>
+                </Button>
               </CardActions>
             </Card>
           </Grid>
           {/*-------------------------------- Grid items---------------------  */}
           <Grid item sx={{padding: '20px 0'}} xs={12} sm={6}>
-            <Card sx={{height: '100%', display: 'flex', flexDirection: 'column'}}>
+            <Card sx={{height: '100%', display: 'flex', flexDirection: 'column'}} className='animateCard'>
               <CardMedia
                 sx={{paddingTop: '56.25%'}}
                 image='https://th.bing.com/th/id/OIP.miyD2HqmD664oIm7qk4lLgHaD4?pid=ImgDet&rs=1'
@@ -123,10 +127,14 @@ const HoMe = () => {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size='small' color='primary'>
+                <Button size='big' color='primary'>
                   <a href="https://new-space-x.vercel.app/" target={'blank'} className='linkCard'>View</a>
                 </Button>
-                <Button size='small' color='primary'>Repositories</Button>
+                <Button size='big' color='primary'>
+                  <a href="https://github.com/NguyenBao23131/New__SpaceX" target={'blank'} className='linkCardActive'>
+                    Repositories
+                  </a>
+                </Button>
               </CardActions>
             </Card>
           </Grid>

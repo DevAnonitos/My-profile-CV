@@ -8,25 +8,43 @@
     background-color: #f9ca24;
 }
 
-.headingCard {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2.4rem;
-    color: #f9ca24;
-}
+.animateCard {
 
-.linkCard {
-    text-decoration: none;
-    color: #0c0c0c;
-    font-size: 1.6rem;
-    padding: 6px 30px;
-    border: 1px solid #1e90ff;
-    border-radius: 10px;
-
-    &:hover{
-        background-color: #1e90ff;
-        color: var(--background-main-color);
+    animation-fill-mode: forwards;
+    animation: bounceInUp 1s 0.5s;
+    
+    .headingCard {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.4rem;
+        color: #f9ca24;
+    }
+    
+    .linkCard {
+        text-decoration: none;
+        color: #0c0c0c;
+        font-size: 1.6rem;
+        padding: 6px 30px;
+        border: 1px solid #1e90ff;
+        border-radius: 10px;
+        transition: all 0.3s ease-in-out;
+    
+        &:hover{
+            background-color: #1e90ff;
+            color: var(--background-main-color);
+        }
+    }
+    
+    .linkCardActive {
+        text-decoration: none;
+        color: #fafaff;
+        font-size: 1.6rem;
+        padding: 6px 40px;
+        border-radius: 10px;
+        background-color: #ff6348;
     }
 }
+
+
 
