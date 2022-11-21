@@ -53,45 +53,45 @@ function Row(props) {
         <TableCell>
           <IconButton
             aria-label="expand row"
-            size="small"
+            size="big"
             onClick={() => setOpen(!open)}
           >
             {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
           </IconButton>
         </TableCell>
-        <TableCell component="th" scope="row">
+        <TableCell component="th" scope="row" sx={{fontSize: 16}}>
           {row.name}
         </TableCell>
-        <TableCell align="right">{row.calories}</TableCell>
-        <TableCell align="right">{row.fat}</TableCell>
-        <TableCell align="right">{row.carbs}</TableCell>
-        <TableCell align="right">{row.protein}</TableCell>
+        <TableCell align="right" sx={{fontSize: 16}}>{row.calories}</TableCell>
+        <TableCell align="right" sx={{fontSize: 16}}>{row.fat}</TableCell>
+        <TableCell align="right" sx={{fontSize: 16}}>{row.carbs}</TableCell>
+        <TableCell align="right" sx={{fontSize: 16}}>{row.protein}</TableCell>
       </TableRow>
       <TableRow>
         <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
-          <Collapse in={open} timeout="auto" unmountOnExit>
+          <Collapse in={open} timeout="auto" unmountOnExit sx={{fontSize: 16}}>
             <Box sx={{ margin: 1 }}>
-              <Typography variant="h6" gutterBottom component="div">
+              <Typography variant="h4" gutterBottom component="div">
                 History
               </Typography>
-              <Table size="small" aria-label="purchases">
+              <Table size="big" aria-label="purchases">
                 <TableHead>
                   <TableRow>
-                    <TableCell>Date</TableCell>
-                    <TableCell>Customer</TableCell>
-                    <TableCell align="right">Amount</TableCell>
-                    <TableCell align="right">Total price ($)</TableCell>
+                    <TableCell sx={{fontSize: 12}}>Date</TableCell>
+                    <TableCell sx={{fontSize: 10}}>Customer</TableCell>
+                    <TableCell align="right" sx={{fontSize: 12}}>Amount</TableCell>
+                    <TableCell align="right" sx={{fontSize: 12}}>Total price ($)</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
                   {row.history.map((historyRow) => (
                     <TableRow key={historyRow.date}>
-                      <TableCell component="th" scope="row">
+                      <TableCell component="th" scope="row" sx={{fontSize: 12}}>
                         {historyRow.date}
                       </TableCell>
-                      <TableCell>{historyRow.customerId}</TableCell>
-                      <TableCell align="right">{historyRow.amount}</TableCell>
-                      <TableCell align="right">
+                      <TableCell sx={{fontSize: 12}}>{historyRow.customerId}</TableCell>
+                      <TableCell align="right" sx={{fontSize: 12}}>{historyRow.amount}</TableCell>
+                      <TableCell align="right" sx={{fontSize: 12}}>
                         {Math.round(historyRow.amount * row.price * 100) / 100}
                       </TableCell>
                     </TableRow>
@@ -139,7 +139,7 @@ const Login = () => {
     <>
       <div>
         {/* app bar with loggin */}
-        <AppBar position='relative' sx={{marginLeft: 10, display: 'flex', justifyContent: 'space-between', backgroundColor: '#fff'}}>
+        <AppBar position='relative' sx={{marginLeft: 10, display: 'flex', justifyContent: 'space-between', backgroundColor: ''}}>
           <Toolbar sx={{display: 'flex', justifyContent: 'center'}}>
             <Typography variant="h2" color="initial">
               My Current Projects
@@ -152,16 +152,16 @@ const Login = () => {
 
         {/* table container */}
 
-        <TableContainer component={Paper}>
+        <TableContainer component={Paper} sx={{display: 'flex', flexDirection:'column', width: 1500, height: 400, justifyContent: 'center', alignItems:'center', marginLeft: 18, marginTop: 10}}>
           <Table aria-label="collapsible table">
             <TableHead>
               <TableRow>
                 <TableCell />
-                <TableCell>Dessert (100g serving)</TableCell>
-                <TableCell align="right">Calories</TableCell>
-                <TableCell align="right">Fat&nbsp;(g)</TableCell>
-                <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-                <TableCell align="right">Protein&nbsp;(g)</TableCell>
+                <TableCell sx={{fontSize: 20}}>Dessert (100g serving)</TableCell>
+                <TableCell align="right" sx={{fontSize: 20}}>Calories</TableCell>
+                <TableCell align="right" sx={{fontSize: 20}}>Fat&nbsp;(g)</TableCell>
+                <TableCell align="right" sx={{fontSize: 20}}>Carbs&nbsp;(g)</TableCell>
+                <TableCell align="right" sx={{fontSize: 20}}>Protein&nbsp;(g)</TableCell>
               </TableRow>
             </TableHead>
               <TableBody>

@@ -33,6 +33,10 @@ function stringAvatar(name) {
   };
 }
 
+const titleContent = {
+  titleFirst: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum rem tempore modi asperiores fugit laborum magnam repellat exercitationem odit eveniet vero, maxime alias esse veniam nisi voluptatibus autem fuga quasi.'
+}
+
 const HoMe = () => {
 
   return (
@@ -87,11 +91,11 @@ const HoMe = () => {
                 title='image title'
               />
               <CardContent sx={{flexGrow: 1}}>
-                <Typography gutterBottom variant='h4' className='headingCard'>
-                  Heading
+                <Typography gutterBottom variant='h3' className='headingCard'>
+                  Manage landing page
                 </Typography>
                 <Typography>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  {titleContent.titleFirst}
                 </Typography>
               </CardContent>
               <CardActions>
@@ -111,11 +115,11 @@ const HoMe = () => {
                 title='image title'
               />
               <CardContent sx={{flexGrow: 1}}>
-                <Typography gutterBottom variant='h4' className='headingCard'>
-                  Space X
+                <Typography gutterBottom variant='h3' className='headingCard'>
+                  Space X clone
                 </Typography>
                 <Typography>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                  {titleContent.titleFirst}
                 </Typography>
               </CardContent>
               <CardActions>

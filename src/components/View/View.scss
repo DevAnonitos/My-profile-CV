@@ -16,3 +16,17 @@
     color: #f9ca24;
 }
 
+.linkCard {
+    text-decoration: none;
+    color: #0c0c0c;
+    font-size: 1.6rem;
+    padding: 6px 30px;
+    border: 1px solid #1e90ff;
+    border-radius: 10px;
+
+    &:hover{
+        background-color: #1e90ff;
+        color: var(--background-main-color);
+    }
+}
+
