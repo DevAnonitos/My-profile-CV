@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import { auth, db, storage } from '../../firebase'
 
 import { Typography, AppBar, Card, CardActions, CardContent, CssBaseline, Grid, Toolbar, Container, Button, CardMedia } from '@mui/material'
@@ -33,14 +33,11 @@ function stringAvatar(name) {
   };
 }
 
-
-
-
 const HoMe = () => {
 
   return (
   <>
-    <AppBar position='relative' sx={{marginLeft: 10, display: 'flex', justifyContent: 'space-between'}}>
+    <AppBar position='relative' sx={{marginLeft: 10, display: 'flex', justifyContent: 'space-between', backgroundColor: '#fff'}}>
       <Toolbar sx={{display: 'flex', justifyContent: 'center'}}>
         <Typography variant="h2" color="initial">
           My Current Projects
@@ -49,6 +46,7 @@ const HoMe = () => {
         <button className='Logout-btn' onClick={() => auth.signOut()}>Sign out</button>
       </Toolbar>
     </AppBar> 
+    {/*---------------------------MAIN CONTENT---------------------------------- */}
     <main>
       <div>
         <Container maxWidth='sm'>
@@ -61,12 +59,12 @@ const HoMe = () => {
           <div>
             <Grid container spacing={2} justifyContent='center' sx={{marginBottom: 4}}>
               <Grid item>
-                <Button variant='contained' color='primary' sx={{padding: 2}}>
+                <Button variant='contained' color='primary' sx={{padding: 2, fontSize: '14px', fontWeight: 500}}>
                   See my project
                 </Button>
               </Grid>
               <Grid item>
-                <Button variant='outlined' color='primary' sx={{padding: 2}}>
+                <Button variant='outlined' color='primary' sx={{padding: 2, fontSize: '14px', fontWeight: 500}}>
                   Secondary Action
                 </Button>
               </Grid>
@@ -74,9 +72,14 @@ const HoMe = () => {
           </div>
         </Container>
       </div>
+      {/* content container */}
       <Container maxWidth='md'>
         <Grid container spacing={4} sx={{display: 'flex', justifyContent: 'space-between', flexDirection: 'row'}}>
+
+          {/*----------------------------Grid items------------------------- */}
           <Grid item sx={{padding: '20px 0'}} xs={12} sm={6}>
+            {/*----------------- Card content-------------------------------- */}
+
             <Card sx={{height: '100%', display: 'flex', flexDirection: 'column'}}>
               <CardMedia
                 sx={{paddingTop: '56.25%'}}
@@ -93,12 +96,13 @@ const HoMe = () => {
               </CardContent>
               <CardActions>
                 <Button size='small' color='primary'>
-                  <a href="https://nguyenbao23131.github.io/Manage_landing_page/" target={'blank'}>View</a>
+                  <a href="https://nguyenbao23131.github.io/Manage_landing_page/" target={'blank'} className='linkCard'>View</a>
                 </Button>
                 <Button size='small' color='primary'>Repositories</Button>
               </CardActions>
             </Card>
           </Grid>
+          {/*-------------------------------- Grid items---------------------  */}
           <Grid item sx={{padding: '20px 0'}} xs={12} sm={6}>
             <Card sx={{height: '100%', display: 'flex', flexDirection: 'column'}}>
               <CardMedia
@@ -116,12 +120,13 @@ const HoMe = () => {
               </CardContent>
               <CardActions>
                 <Button size='small' color='primary'>
-                  <a href="https://new-space-x.vercel.app/" target={'blank'}>View</a>
+                  <a href="https://new-space-x.vercel.app/" target={'blank'} className='linkCard'>View</a>
                 </Button>
                 <Button size='small' color='primary'>Repositories</Button>
               </CardActions>
             </Card>
           </Grid>
+
         </Grid>
       </Container>
     </main>

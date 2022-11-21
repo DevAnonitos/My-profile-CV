@@ -70,10 +70,12 @@ body {
   cursor: pointer;
   border: none;
   outline: none;
+  background-color: #EE5A24;
+  color: #f1f1f1;
 }
 
 .Login-btn:hover {
   background-color: var(--primary-color);
-  color: #fff;
+  color: #000;
 }
 

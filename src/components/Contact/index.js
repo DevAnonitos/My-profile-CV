@@ -97,6 +97,7 @@ const Contact = () => {
                 <br />
                 District 12, HoChiMinh city
             </div>
+            {/*--------------------- MAP container---------------------- */}
             <div className='map-wrap'>
                 <MapContainer center={[10.861940, 106.658890]} zoom={13}>
                     <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />

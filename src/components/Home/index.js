@@ -28,7 +28,7 @@ function Home() {
     return ( 
         <div className='container home-page'>
             <div className='text-zone'>
-
+                {/*------------------- main title----------------- */}
                 <h1 className='main-title'>
                     {/* title */}
                     <span className={letterClass}>H</span>

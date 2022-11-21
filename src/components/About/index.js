@@ -8,7 +8,7 @@ import Loader from 'react-loaders'
 import './About.scss'
 
 const About = () => {
-
+    // logic hook
     const [letterClass, setLetterClass] = useState('text-animate');
     useEffect(() => {
         setTimeout(() => {
@@ -34,7 +34,7 @@ const About = () => {
                     I'm a persistent, patient and hard-working person. I want to make a useful contribution to the community.
                 </p>
             </div>
-
+            {/* Cube state */}
             <div className='stage-cube-cont'>
                 <div className='cube-spinner'>
                     <div className='face1'>

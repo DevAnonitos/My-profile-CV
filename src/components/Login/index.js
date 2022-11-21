@@ -1,7 +1,8 @@
 import React from 'react'
 import { signInWithGoogle } from '../../firebase'
-import { Typography, AppBar, Card, CardActions, CardContent, CssBaseline, Grid, Toolbar, Container } from '@mui/material'
+import { Typography, AppBar, Toolbar} from '@mui/material'
 
+// components MUI
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import Collapse from '@mui/material/Collapse';
@@ -16,6 +17,8 @@ import Paper from '@mui/material/Paper';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
+
+// func DATA table
 function createData(name, calories, fat, carbs, protein, price) {
   return {
     name,
@@ -39,6 +42,7 @@ function createData(name, calories, fat, carbs, protein, price) {
   };
 }
 
+// table row components
 function Row(props) {
   const { row } = props;
   const [open, setOpen] = React.useState(false);
@@ -102,6 +106,7 @@ function Row(props) {
   );
 }
 
+// props key 
 Row.propTypes = {
   row: PropTypes.shape({
     calories: PropTypes.number.isRequired,
@@ -119,7 +124,7 @@ Row.propTypes = {
     protein: PropTypes.number.isRequired,
   }).isRequired,
 };
-
+// 
 const rows = [
   createData('Frozen yoghurt', 159, 6.0, 24, 4.0, 3.99),
   createData('Ice cream sandwich', 237, 9.0, 37, 4.3, 4.99),
@@ -134,7 +139,7 @@ const Login = () => {
     <>
       <div>
         {/* app bar with loggin */}
-        <AppBar position='relative' sx={{marginLeft: 10, display: 'flex', justifyContent: 'space-between'}}>
+        <AppBar position='relative' sx={{marginLeft: 10, display: 'flex', justifyContent: 'space-between', backgroundColor: '#fff'}}>
           <Toolbar sx={{display: 'flex', justifyContent: 'center'}}>
             <Typography variant="h2" color="initial">
               My Current Projects
@@ -143,9 +148,10 @@ const Login = () => {
               Sign in with Google
             </button>
           </Toolbar>
-        </AppBar> 
+        </AppBar>
 
         {/* table container */}
+
         <TableContainer component={Paper}>
           <Table aria-label="collapsible table">
             <TableHead>
