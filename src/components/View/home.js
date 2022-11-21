@@ -88,7 +88,7 @@ const HoMe = () => {
                   Heading
                 </Typography>
                 <Typography>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, consequatur. Officia omnis, neque accusamus alias vero debitis veniam odio, error vitae at cumque ducimus fugit, nisi assumenda magni maxime molestiae?
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 </Typography>
               </CardContent>
               <CardActions>
@@ -111,7 +111,7 @@ const HoMe = () => {
                   Space X
                 </Typography>
                 <Typography>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, consequatur. Officia omnis, neque accusamus alias vero debitis veniam odio, error vitae at cumque ducimus fugit, nisi assumenda magni maxime molestiae?
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
                 </Typography>
               </CardContent>
               <CardActions>
