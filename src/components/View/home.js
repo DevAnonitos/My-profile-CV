@@ -51,7 +51,7 @@ const HoMe = () => {
                 title='image title'
               />
               <CardContent sx={{flexGrow: 1}}>
-                <Typography gutterBottom variant='h5'>
+                <Typography gutterBottom variant='h4' className='headingCard'>
                   Heading
                 </Typography>
                 <Typography>
@@ -59,8 +59,10 @@ const HoMe = () => {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size='small' color='primary'>View</Button>
-                <Button size='small' color='primary'>Edit</Button>
+                <Button size='small' color='primary'>
+                  <a href="https://nguyenbao23131.github.io/Manage_landing_page/" target={'blank'}>View</a>
+                </Button>
+                <Button size='small' color='primary'>Repositories</Button>
               </CardActions>
             </Card>
           </Grid>
@@ -72,8 +74,8 @@ const HoMe = () => {
                 title='image title'
               />
               <CardContent sx={{flexGrow: 1}}>
-                <Typography gutterBottom variant='h5'>
-                  Heading
+                <Typography gutterBottom variant='h4' className='headingCard'>
+                  Space X
                 </Typography>
                 <Typography>
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, consequatur. Officia omnis, neque accusamus alias vero debitis veniam odio, error vitae at cumque ducimus fugit, nisi assumenda magni maxime molestiae?
@@ -83,7 +85,7 @@ const HoMe = () => {
                 <Button size='small' color='primary'>
                   <a href="https://new-space-x.vercel.app/" target={'blank'}>View</a>
                 </Button>
-                <Button size='small' color='primary'>Edit</Button>
+                <Button size='small' color='primary'>Repositories</Button>
               </CardActions>
             </Card>
           </Grid>
