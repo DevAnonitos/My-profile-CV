@@ -87,7 +87,7 @@ const HoMe = () => {
             <Card sx={{height: '100%', display: 'flex', flexDirection: 'column'}} className='animateCard'>
               <CardMedia
                 sx={{paddingTop: '56.25%'}}
-                image='https://th.bing.com/th/id/OIP.miyD2HqmD664oIm7qk4lLgHaD4?pid=ImgDet&rs=1'
+                image='https://th.bing.com/th/id/OIP.XE_afishvXTYqAJ8QcXHfgHaEK?pid=ImgDet&rs=1'
                 title='image title'
               />
               <CardContent sx={{flexGrow: 1}}>
@@ -115,7 +115,7 @@ const HoMe = () => {
             <Card sx={{height: '100%', display: 'flex', flexDirection: 'column'}} className='animateCard'>
               <CardMedia
                 sx={{paddingTop: '56.25%'}}
-                image='https://th.bing.com/th/id/OIP.miyD2HqmD664oIm7qk4lLgHaD4?pid=ImgDet&rs=1'
+                image='https://th.bing.com/th/id/OIP.XE_afishvXTYqAJ8QcXHfgHaEK?pid=ImgDet&rs=1'
                 title='image title'
               />
               <CardContent sx={{flexGrow: 1}}>
