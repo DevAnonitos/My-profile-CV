@@ -57,7 +57,7 @@ const HoMe = () => {
           <Typography variant='h3' align='center' color='#f1c40f' gutterBottom sx={{marginTop: 2}}> 
             Some Projects
           </Typography>
-          <Typography variant='h5' align='center' color='#fff' paragraph>
+          <Typography variant='h5' align='center' color='#fff' paragraph sx={{fontSize: 20}}>
             Hello everyone. This is a view page and I'm trying to show you some current projects. About HTML, CSS and Javascript, some library Reactjs, JQUERY, SASS
           </Typography>
           <div>
@@ -94,7 +94,7 @@ const HoMe = () => {
                 <Typography gutterBottom variant='h3' className='headingCard'>
                   Manage landing page
                 </Typography>
-                <Typography>
+                <Typography sx={{fontSize: 14, display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                   {titleContent.titleFirst}
                 </Typography>
               </CardContent>
@@ -122,7 +122,7 @@ const HoMe = () => {
                 <Typography gutterBottom variant='h3' className='headingCard'>
                   Space X clone
                 </Typography>
-                <Typography>
+                <Typography sx={{fontSize: 14 , display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                   {titleContent.titleFirst}
                 </Typography>
               </CardContent>
