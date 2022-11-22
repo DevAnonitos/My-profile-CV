@@ -1,6 +1,7 @@
 import './AnimatedLetters.scss'
 import React from 'react'
 
+// function components
 const AnimatedLetters = ({ letterClass, strArray, idx }) => {
   return (
     <span>

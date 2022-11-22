@@ -1,9 +1,10 @@
-
+// components firebase
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { getStorage } from "firebase/storage";
 import { getFirestore } from 'firebase/firestore/lite'
 
+// firebase config
 const firebaseConfig = {
   apiKey: "AIzaSyB6Yn7h0JtfSzCCXlaysL86yp1IQlaoBxs",
   authDomain: "reactjs-login-dashboard.firebaseapp.com",

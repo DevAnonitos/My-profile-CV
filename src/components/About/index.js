@@ -7,6 +7,7 @@ import AnimatedLetters from '../AnimatedLetters'
 import Loader from 'react-loaders'
 import './About.scss'
 
+// function components
 const About = () => {
     // logic hook
     const [letterClass, setLetterClass] = useState('text-animate');
@@ -19,6 +20,7 @@ const About = () => {
   return (
     <>
         <div className='container about-page'>
+            {/* ----- MAIN-Content------------- */}
             <div className='text-zone'>
                 <h1 className='main-title'>
                     <AnimatedLetters
