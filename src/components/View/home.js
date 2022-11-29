@@ -44,7 +44,7 @@ const HoMe = () => {
     <AppBar position='relative' sx={{marginLeft: 10, display: 'flex', justifyContent: 'space-between', backgroundColor: '#fff'}}>
       <Toolbar sx={{display: 'flex', justifyContent: 'center'}}>
         <Typography variant="h2" color="initial">
-          My Current Projects
+          My Current Project
         </Typography>
         <Avatar {...stringAvatar('Kent Dodds')} sx={{marginLeft: 2}} />
         <button className='Logout-btn' onClick={() => auth.signOut()}>Sign out</button>
